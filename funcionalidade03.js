@@ -1,4 +1,4 @@
-// A funcionalidade 3 do nosso sistema é a opção de realizar o pedido
+// A funcionalidade 3 do sistema é a opção de realizar o pedido
 
 // Objeto que representa os diferentes tipos de pizzas disponíveis
 const Pizza = {
