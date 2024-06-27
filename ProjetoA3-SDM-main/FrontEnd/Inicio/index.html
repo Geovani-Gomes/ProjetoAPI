@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH MY PIZZA!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="perfil">
+                <button>
+                    <a href="../perfil/perfil.html"> <img src="/src/Perfil2.png" class="icon" /><br></a>
+                    <div>Perfil</div>
+                </button>
+              
+            </div>
+            <div class="box">
+                <img src="/src/Logo.jpg" width="130" height="110" alt="Logo">
+            </div>
+            <div class="carrinho">
+                    <button> 
+                       <a href="../Carrinho/Carrinho.html"><img src="/src/Carrinho2.png" class="icon"/><br></a>
+                    <div>Carrinho</div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main><div class="login">
+        <h3 style='text-align:center'>Faça seu Login <a href="/Login/Login.html"> AQUI! </a></h3>
+    </div>
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <li>
+                    <img src="/src/Pizza de Calabresa.jpg" width="650">
+                    </li>
+                    <li>
+                        <img src="/src/Pizza de Muçarela.jpg" width="650"> 
+                    </li>
+                    <li>
+                        <img src="/src/PizzaFrango.jpg" width="650">
+                    </li>
+                    <li>
+                        <img src="/src/PizzaChocolate.jpg" width="650">
+                    </li>
+                    <li>
+                        <img src="/src/Pizza de Romeu & Julieta.jpg" width="650">
+                    </li>
+php
+Copiar código
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+    <section class="menu">
+        <h2>Nosso Cardápio</h2>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Calabresa</h3>
+                <p>Calabresa fatiada e cebola</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$45,00</span>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Portuguesa</h3>
+                <p>Presunto picado, ovos e cebola coberto de muçarela</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$50,00</span>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Muçarela</h3>
+                <p>Muçarela, tomate e orégano</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$40,00</span>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Frango</h3>
+                <p>Frango desfiado coberto com catupiry</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$50,00</span>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Nutella</h3>
+                <p>Creme de avelã Nutella com morango</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$50,00</span>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <div class="pizza-details">
+                <h3>Pizza de Romeu & Julieta</h3>
+                <p>Muçarela coberto com goiabada, açúcar <br> e canela</p>
+            </div>
+            <div class="pizza-price">
+                <span>R$45,00</span>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    
+        
+    <br>
+    <div class="login">
+        <h3 style='text-align:center'>Faça seu pedido <a href="/Carrinho/Carrinho.html"> AQUI! </a></h3>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderLink = document.getElementById('orderLink');
+            if (localStorage.getItem('loggedIn') === 'true') {
+                orderLink.href = "/Carrinho/Carrinho.html";
+            } else {
+                orderLink.href = "/login.html";
+                alert('Você precisa estar logado para fazer um pedido.');
+            }
+        });
+    </script>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="form-container">
+            <img src="/src/Logo.jpg" width="180" height="150" class="center-logo" />
+
+            <div class="input-box">
+                <input type="text" id="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="senha" placeholder="Senha" required>
+            </div>
+
+            <div class="forgot">
+                <a href="#" onclick="forgotPassword()">Esqueci a senha</a>
+            </div>
+
+            <button type="button" class="btn" onclick="login()">ENTRAR</button>
+
+            <div class="cadastro">
+                <p>Não tem uma conta?
+                    <a href="/Cadastro/Cadastro.html">Cadastre-se </a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            // Obter os valores dos campos do formulário
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            // Verificar se o usuário está cadastrado
+            var storedUserData = localStorage.getItem('userData');
+            if (storedUserData) {
+                var userData = JSON.parse(storedUserData);
+                if (userData.email === email && userData.senha === senha) {
+                    // Login bem-sucedido, redirecionar para a página inicial
+                    window.location.href = "/Inicio/index.html";
+                } else {
+                    alert("E-mail ou senha incorretos. Por favor, tente novamente.");
+                }
+            } else {
+                alert("Não há nenhum usuário cadastrado com esse e-mail. Por favor, cadastre-se.");
+            }
+        }
+
+        function forgotPassword() {
+            alert("Um e-mail de recuperação foi enviado para o seu endereço de e-mail.");
+            // Aqui você pode adicionar a lógica para enviar um e-mail de recuperação de senha
+        }
+    </script>
+</body>
+
+</html>

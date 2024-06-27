@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Administrador</title>
+    <link rel="stylesheet" href="CadastroAdm.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <img src="/src/Logo.jpg" width="180" height="150"/>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="cabecalho">
+                <h3>CADASTRO DE NOVOS ADMINISTRADORES</h3>
+            </div>
+            <div class="form">
+                <form id="registrationForm" onsubmit="salvarAdministrador(event)">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome Completo</label>
+                            <input id="nome" type="text" name="nome" placeholder="Digite o seu nome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="text" name="cpf" placeholder="Digite o seu CPF" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite o seu E-mail" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" placeholder="Digite a sua senha" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="cargo">Cargo</label>
+                            <input id="cargo" type="text" name="cargo" placeholder="Cargo" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="telefone">Número de telefone</label>
+                            <input id="telefone" type="text" name="telefone" placeholder="Telefone" required>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <button type="submit" class="btn">CADASTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="cadastros">
+                <div class="cabecalho">
+                    <h3>LISTA DE ADMINISTRADORES</h3>
+                </div>
+                <ul id="listaAdministradores" class="lista-administradores">
+                    <!-- Aqui serão adicionados dinamicamente os administradores cadastrados -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function salvarAdministrador(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            // Obter os valores dos campos do formulário
+            var nome = document.getElementById("nome").value;
+            var cpf = document.getElementById("cpf").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var cargo = document.getElementById("cargo").value;
+            var telefone = document.getElementById("telefone").value;
+
+            // Criar um objeto para representar os dados do administrador
+            var administrador = {
+                nome: nome,
+                cpf: cpf,
+                email: email,
+                senha: senha,
+                cargo: cargo,
+                telefone: telefone
+            };
+
+            // Verificar se já existe algum dado de administradores no localStorage
+            var administradores = JSON.parse(localStorage.getItem('administradores')) || [];
+
+            // Adicionar o novo administrador à lista
+            administradores.push(administrador);
+
+            // Salvar a lista atualizada de administradores no localStorage
+            localStorage.setItem('administradores', JSON.stringify(administradores));
+
+            // Limpar o formulário após o cadastro
+            document.getElementById("registrationForm").reset();
+
+            // Atualizar a lista de administradores exibida na página
+            atualizarListaAdministradores();
+        }
+
+        function atualizarListaAdministradores() {
+            // Obter a lista de administradores do localStorage
+            var administradores = JSON.parse(localStorage.getItem('administradores')) || [];
+
+            // Selecionar o elemento <ul> onde os administradores serão listados
+            var listaAdministradores = document.getElementById("listaAdministradores");
+
+            // Limpar qualquer conteúdo pré-existente na lista
+            listaAdministradores.innerHTML = '';
+
+            // Iterar sobre o array de administradores e criar os <li> correspondentes
+            administradores.forEach(function(administrador, index) {
+                var li = document.createElement("li");
+                li.classList.add("adm");
+                li.innerHTML = `
+                    <h4>${administrador.nome}</h4>
+                    <div class="mudancas">
+                        <button onclick="excluirAdministrador(${index})">Excluir</button>
+                        <span></span>
+                        <i class='bx bxs-edit'></i>
+                    </div>
+                `;
+                listaAdministradores.appendChild(li);
+            });
+        }
+
+        function excluirAdministrador(index) {
+            // Obter a lista de administradores do localStorage
+            var administradores = JSON.parse(localStorage.getItem('administradores')) || [];
+
+            // Remover o administrador pelo índice
+            administradores.splice(index, 1);
+
+            // Salvar a lista atualizada de administradores no localStorage
+            localStorage.setItem('administradores', JSON.stringify(administradores));
+
+            // Atualizar a lista de administradores exibida na página
+            atualizarListaAdministradores();
+        }
+
+        // Chamar a função para atualizar a lista de administradores ao carregar a página
+        window.onload = function() {
+            atualizarListaAdministradores();
+        };
+    </script>
+</body>
+</html>

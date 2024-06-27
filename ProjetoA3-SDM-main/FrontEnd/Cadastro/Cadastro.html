@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="Cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form id="registrationForm">
+
+                <h1>
+                    <img src="/src/Logo.jpg" width="180" height="150"/>
+                </h1>
+
+                <div class="form-header">
+                    <div class="title">
+                        <h1> FAÇA O SEU CADASTRO </h1>
+                    </div>
+                </div>
+    
+                <div class="input-group centralized-div">
+                    <div class="input-box">
+                        <label> Nome Completo </label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite o seu nome " required>
+                    </div>
+                    <div class="input-box">
+                        <label> CPF </label>
+                        <input id="cpf" type="text" name="cpf" placeholder="Digite o seu CPF" required>
+                    </div>
+                    <div class="input-box">
+                        <label> E-mail </label>
+                        <input id="email" type="text" name="email" placeholder="Digite o seu E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label> Senha </label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite a sua senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label> Endereço </label>
+                        <input id="endereco" type="text" name="endereco" placeholder="Digite o seu endereço" required>
+                    </div>
+                    <div class="input-box">
+                        <label> Número Residencial</label>
+                        <input id="numero" type="text" name="numero" placeholder="Nº" required>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <button type="button" class="btn" onclick="saveData()">CADASTRAR</button>
+    </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveData() {
+            // Obter os valores dos campos do formulário
+            var nome = document.getElementById("nome").value;
+            var cpf = document.getElementById("cpf").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var endereco = document.getElementById("endereco").value;
+            var numero = document.getElementById("numero").value;
+            
+            // Criar um objeto para representar os dados do usuário
+            var userData = {
+                nome: nome,
+                cpf: cpf,
+                email: email,
+                senha: senha,
+                endereco: endereco,
+                numero: numero
+            };
+            
+            // Converter o objeto para uma string JSON
+            var userDataJSON = JSON.stringify(userData);
+            
+            // Armazenar os dados no localStorage
+            localStorage.setItem('userData', userDataJSON);
+            
+            // Redirecionar para a página inicial após o cadastro
+            window.location.href = "/Inicio/index.html";
+        }
+    </script>
+</body>
+</html>

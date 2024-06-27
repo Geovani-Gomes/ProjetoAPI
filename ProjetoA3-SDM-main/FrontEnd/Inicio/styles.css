@@ -1,0 +1,235 @@
+body {
+    background-color: #E3F6FF;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+header {
+    background-color: #8DCBE6;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 5px solid #FFEA20;
+    box-shadow: 0 0 10px rgba(50, 50, 50, .60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+.perfil {
+    position: relative;
+    float: left;
+    width: 50%;
+    
+}
+
+.perfil button {
+    position: relative;
+    float: left;
+}
+
+.carrinho {
+    position: relative;
+    float: right;
+    width: 50%;
+}
+
+.carrinho button {
+    position: relative;
+    float: right;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.icon {
+    height: 70px; /* Define a altura desejada para os ícones */
+    width: auto; /* Mantém a proporção da largura */
+}
+
+button {
+    border: none;
+    padding: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #8DCBE6;
+}
+
+
+
+main {
+    padding: 15px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 650px;
+    max-height: 350px;
+    margin: 20px auto;
+    border: 2px solid #8DCBE6;
+    border-radius: 15px;
+    backdrop-filter: blur (20px);
+        box-shadow: 0 0 10px rgba(50, 50, 50, .60);
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+}
+.carousel-slide li {
+    list-style-type: none;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: .3s;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu {
+    max-width: 600px;
+    backdrop-filter: blur (20px);
+    box-shadow: 0 0 10px rgba(50, 50, 50, .60);
+    backdrop-filter: blur (20px);
+    margin: 0 auto;
+    border: 2px solid #8DCBE6;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.pizza-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #8DCBE6;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: #F0F8FF;
+}
+
+.pizza-details {
+    flex: 1;
+    padding-right: 20px; /* Espaçamento entre o texto e o preço */
+}
+
+.pizza-details h3 {
+    margin: 0;
+    color: #333333;
+}
+
+.pizza-details p {
+    margin-top: 5px;
+    color: #666666;
+}
+
+.pizza-price {
+    flex-shrink: 0; /* Impede que o preço diminua ao redimensionar */
+}
+
+.pizza-price span {
+    color: #333333;
+    font-weight: bold;
+}
+
+
+.pizza-item h3 {
+    margin: 0;
+    color: #333333;
+}
+
+.pizza-item span {
+    color: #333333;
+    font-weight: bold;
+}
+
+.pizza-item button {
+    background-color: #FFEA20;
+    color: #333333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+.pizza-item a:hover {
+    background-color: #FFD700;
+}
+
+.login {
+    max-width: 600px;
+    backdrop-filter: blur (20px);
+    box-shadow: 0 0 10px rgba(50, 50, 50, .60);
+    backdrop-filter: blur (20px);
+    margin: 0 auto;
+    border: 2px solid #8DCBE6;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.login h3 {
+    margin: 0;
+    color: #333333;
+}
+
+.login a {
+    background-color: #FFEA20;
+    color: #333333;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.login a:hover {
+    background-color: #FFD700;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="Carrinho.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="carrinho">
+        <div class="cabecalho">
+            <a href="/inicio/index.html"><i class="bx bx-chevron-left"></i></a>
+            <h3> MEU CARRINHO </h3>
+        </div>
+        <ul> 
+            <!--ITEM 1-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Calabresa</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 45,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="1"></i>
+                            <span class="quantidade" data-item="1">0</span>
+                            <i class="bx bx-plus" data-item="1"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--ITEM 2-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Portuguesa</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 50,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="2"></i>
+                            <span class="quantidade" data-item="2">0</span>
+                            <i class="bx bx-plus" data-item="2"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--ITEM 3-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Muçarela</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 40,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="3"></i>
+                            <span class="quantidade" data-item="3">0</span>
+                            <i class="bx bx-plus" data-item="3"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--ITEM 4-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Frango</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 50,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="4"></i>
+                            <span class="quantidade" data-item="4">0</span>
+                            <i class="bx bx-plus" data-item="4"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--ITEM 5-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Nutella</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 50,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="5"></i>
+                            <span class="quantidade" data-item="5">0</span>
+                            <i class="bx bx-plus" data-item="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--ITEM 6-->
+            <li class="item">
+                <div class="info">
+                    <h4>Pizza de Romeu & Julieta</h4>
+                    <div class="preco">
+                        <p class="valor">R$ 45,00</p>
+                        <div class="contador">
+                            <i class="bx bx-minus" data-item="6"></i>
+                            <span class="quantidade" data-item="6">0</span>
+                            <i class="bx bx-plus" data-item="6"></i>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="pagamento">
+            <div class="total">
+                Total: R$ 0,00
+            </div>
+            <div class="forma">
+                <p> Forma de pagamento:</p>
+                <div>
+                    <input type="radio" id="credito" name="pagamento" value="credito">
+                    <label for="credito">Cartão de Crédito</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="debito" name="pagamento" value="debito">
+                    <label for="debito">Cartão de Débito</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="dinheiro" name="pagamento" value="dinheiro">
+                    <label for="dinheiro">Dinheiro</label>
+                </div>
+            </div>
+            <a href="Endereco.html" class="continuar-btn">CONTINUAR</a>
+        </div> 
+    </div>
+    <script src="Carrinho.js"></script>
+</body>
+</html>

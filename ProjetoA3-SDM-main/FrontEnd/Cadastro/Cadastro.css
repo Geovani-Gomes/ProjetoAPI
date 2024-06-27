@@ -1,0 +1,122 @@
+body {
+    background-color: #E3F6FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root{
+    --cor-fundo: #E3F6FF;
+    --cor-botoes: #FFEA20;
+    --cor-primaria:#8DCBE6;
+    --cor-secundaria: #9DF1DF;
+}
+
+.container {
+    width: 90%; /* Ajuste a largura para 90% do viewport */
+    max-width: 800px; /* Limite máximo de largura */
+    max-height: 90vh; /* Limite máximo de altura */
+    background-color: #8DCBE6;
+    backdrop-filter: blur(20px); /* Corrigir erro de sintaxe */
+    box-shadow: 0 0 10px rgba(50, 50, 50, .60);
+    color: rgb(0, 0, 0);
+    border-radius: 10px; /* Alterar para borda menos arredondada */
+    padding: 10px; /* Reduzir padding para economizar espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Evitar qualquer rolagem interna */
+    margin: 10px; /* Adicionar margem para espaçamento */
+}
+
+.container h1 {
+    font-size: 24px; /* Reduzir o tamanho da fonte para economizar espaço */
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    padding: 10px; /* Reduzir padding para economizar espaço */
+}
+
+.form-header {
+    width: 100%;
+    margin-bottom: 10px; /* Reduzir margem inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 80px; /* Reduzir largura do botão */
+    height: 35px; /* Reduzir altura do botão */
+    background-color: var(--cor-botoes);
+    border: none;
+    outline: none;
+    border-radius: 20px; /* Reduzir borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 14px; /* Reduzir tamanho da fonte */
+    font-weight: 600;
+    justify-content: center;
+    margin-top: 10px; /* Reduzir margem superior */
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 0; /* Reduzir padding */
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px; /* Reduzir margem inferior */
+    width: 48%; /* Ajuste a largura para evitar overflow em telas menores */
+}
+
+.input-box input {
+    margin: 5px 0; /* Reduzir margem superior e inferior */
+    padding: 5px 15px; /* Reduzir padding */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px; /* Reduzir borda */
+    box-shadow: 1px 1px 6px;
+    background-color: var(--cor-botoes);
+    width: 100%; /* Ajuste a largura para preencher o container */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Ajuste a largura para 100% em telas menores */
+        padding: 10px; /* Reduzir padding */
+    }
+
+    .input-box {
+        width: 100%; /* Ajuste a largura dos input-boxes para 100% */
+    }
+
+    .form {
+        padding: 10px; /* Reduzir padding */
+    }
+
+    .form-header {
+        margin-bottom: 10px; /* Reduzir margem inferior */
+    }
+}
+
+

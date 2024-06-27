@@ -1,0 +1,5 @@
+export enum BordaRecheada {
+    SEM_BORDA_RECHEADA = "SEM_BORDA_RECHEADA",
+    DOCE_DE_LEITE = "DOCE_DE_LEITE",
+    CATUPIRY = "CATUPIRY"
+  }

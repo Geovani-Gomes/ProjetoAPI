@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="perfil">
+                <a href="/Inicio/index.html">
+                    <img src="/src/Voltar.png" width="50" alt="Voltar">
+                    <div>Voltar</div>
+                </a>
+            </div>
+            <div class="box">
+                <img src="/src/Logo.jpg" width="130" height="110" alt="Logo">
+            </div>
+            <div class="spacer"></div> <!-- Espaço vazio para centralizar a LOGO -->
+        </div>
+    </header>
+    <main>
+        <div id="profileInfo" class="profile-info">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="age">Idade:</label>
+            <input type="number" id="age" name="age">
+
+            <button id="saveProfile">Salvar</button>
+        </div>
+    </main>
+    <script src="perfil.js"></script>
+</body>
+</html>

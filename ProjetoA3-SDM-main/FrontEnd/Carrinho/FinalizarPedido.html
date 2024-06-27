@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Finalizado</title>
+    <link rel="stylesheet" href="FinalizarPedido.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div class="container">
+    <div class="centered-content">
+        <div style="text-align:center">
+        <i class='bx bx-check-circle'></i>
+        <h1>Seu Pedido Foi Finalizado!</h1>
+    </div>
+
+
+    <div class="thank-you"><div style="text-align:center">
+        <p>Obrigado por comprar conosco! Seu pedido será processado e enviado em breve.</p>
+    </div>
+    <div style="text-align:center">
+    <div class="actions">
+        <button class="home-button">VOLTAR À PÁGINA INICIAL</button>
+
+    </div>
+</div>
+
+<script>
+    document.querySelector('.home-button').addEventListener('click', () => {
+        window.location.href = '/inicio/index.html'; // Altere para a URL da sua página inicial
+    });
+
+   
+</script>
+
+<body>

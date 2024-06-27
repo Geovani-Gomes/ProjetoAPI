@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="stylesheet" href="Endereco.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="endereco">
+        <div class="cabecalho">
+            <h3> ENDEREÇO DE ENTREGA </h3>
+        </div>
+
+        <ul>
+            <li class="opcao">
+                <input type="checkbox" id="EnderecoCadastro" name="EnderecoCadastro">
+                <label for="EnderecoCadastro"> Endereço do cadastro </label> 
+            </li>
+            <li class="opcao">
+                <input type="checkbox" id="outroEndereco" name="outroEndereco">
+                <label for="outroEndereco">Outro Endereço</label>
+                <div id="outroEnderecoCampos" style="display: none;">
+                    <label for="endereço">Endereço: </label>
+                    <input type="text" id="rua" name="rua">
+                
+                    <label for="numero">Nº</label>
+                    <input type="text" id="numero" name="numero">
+                </div>
+            </li>
+        </ul>
+
+        <a href="../Carrinho/FinalizarPedido.html">CONTINUAR</a>
+    </div>
+
+    <script src="Endereco.js"></script>
+</body>
+</html>
