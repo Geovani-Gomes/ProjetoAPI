@@ -16,7 +16,15 @@ Integrantes:
 
 
 Geovani Gomes Siqueira - RA 823120514 
+
+
 João Henrique Carvalho - RA 822143000 
+
+
 Milena Yuri Akamine - RA 822149430 
+
+
 Sergio Eduardo Bossolani - RA 823150190 
+
+
 Guilherme de Moraes Peres - RA 822128233
