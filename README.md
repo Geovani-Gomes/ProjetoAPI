@@ -12,4 +12,11 @@ Funcionalidades principais:
 
 4. Realizar o pedido: Após a autenticação do usuário, é possível ser feito o pedido da pizza, selecionando o endereço desejado, a forma de pagamento, e de incluir os itens desejados.
 
-Integrantes: Milena Yuri Akamine - RA 822149430 João Henrique Carvalho - RA 822143000 Geovani Gomes Siqueira - RA 823120514 Sergio Eduardo Bossolani - RA 823150190 Guilherme de Moraes Peres - RA 822128233
+Integrantes: 
+
+
+Geovani Gomes Siqueira - RA 823120514 
+João Henrique Carvalho - RA 822143000 
+Milena Yuri Akamine - RA 822149430 
+Sergio Eduardo Bossolani - RA 823150190 
+Guilherme de Moraes Peres - RA 822128233
