@@ -1,4 +1,4 @@
-Projeto A3 - Sistemas distribuídos e mobile “Oh My Pizza”
+Projeto A3 - Sistemas distribuídos e mobile “Oh My Pizza” - 3° semestre
 
 Descrição: O projeto de software “Oh My Pizza” tem como objetivo facilitar o atendimento de uma pizzaria, os clientes realizam os pedidos online e aguardam a pizza chegar na sua residência.
 
